@@ -374,7 +374,7 @@ void NetworkAccessManager::handleFinished(QNetworkReply *reply, const QVariant &
       QString suffix = fn.mid(suffixIdx);
       
       if(equalsIndex >= 0) fn = fn.mid(equalsIndex+1, suffixIdx-equalsIndex-1);
-      else if((suffixIdx = fn.lastIndexOf(".")) > 0) fn = fn.left(suffixIdx-1); 
+      else if((suffixIdx = fn.lastIndexOf(".")) > 0) fn = fn.left(suffixIdx); 
       while(fn.indexOf(".") > 0) fn.replace(fn.indexOf("."), 1, " "); //Replaces any extra dots with spaces in the filename
 
       QDate date = QDate::currentDate();
